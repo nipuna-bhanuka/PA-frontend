@@ -1,0 +1,28 @@
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/department/list">Department</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Create Department</li>
+  </ol>
+</nav>
+<div>
+  <h1>Create Department</h1>
+</div>
+<div class="container">
+  <form #form="ngForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="departmentName">Department Name</label>
+      <input type="text" class="form-control" name="dName" #name="ngModel" [(ngModel)]="department.dName" required placeholder="Enter department name">
+    </div>
+
+    <div class="form-group">
+      <label for="message-text" class="col-form-label">Description</label>
+      <textarea class="form-control" id="message-text" name="dDescription" #address="ngModel" [(ngModel)]="department.dDescription" placeholder="Enter description"></textarea>
+    </div>
+    <br><br>
+    <button class="btn btn-primary" type="submit" [disabled]="form.invalid">Create <i
+      *ngIf="isCreating" class="fa fa-spinner fa-pulse fa-fw"></i></button>
+  </form>
+</div>
+

@@ -1,0 +1,8 @@
+
+.container {
+  background-color: lightgrey;
+  width: 50%;
+  border: 2px solid rgb(73, 82, 85);
+  padding: 50px;
+  margin: 20px;
+}

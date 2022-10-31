@@ -1,0 +1,38 @@
+
+h1{
+  color: white !important;
+  text-align: center;
+}
+
+.mat-devider{
+  border-top-width: 2px;
+  border-color: white;
+}
+
+.mat-list-item{
+  color: white !important;
+  font-size: o.8rem;
+  height: 44px !important;
+  margin-bottom: 4px;
+  border-radius: 5px;
+  margin: 0 8px;
+
+}
+
+.list-item-active{
+  color: #f2f5f7 !important;
+
+}
+
+.mat-subheader{
+  color: #818cf8;
+  font-size: 1rem;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+.active,.a:hover{
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+}
+

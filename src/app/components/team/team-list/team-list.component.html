@@ -1,0 +1,92 @@
+<div class="container" style="margin-left: 10px;">
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Team</li>
+  </ol>
+</nav>
+<div class="row">
+  <div>
+    <h1>Teams</h1>
+  </div>
+  <br>
+</div>
+<div class="row">
+  <div class="col-md-1z">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title"><button type="btn btn-primary" routerLinkActive="active" routerLink="/create/team" >
+          Create Team
+        </button> </h5>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-hover">
+          <!--table class="table" *ngIf="teamList"-->
+            <thead class=" text-primary">
+              <th>Team ID</th>
+              <th>Team Name</th>
+              <th>Department Name</th>
+              <th>No Of Employees</th>
+              <th class="text-right">Action</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>T0001</td>
+                <td>IT-1</td>
+                <td>IT</td>
+                <td>4</td>
+                <td class="text-right">
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary">Edit</button>
+                  <button type="button" class="btn btn-danger mx-3">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>T0002</td>
+                <td>IT-2</td>
+                <td>IT</td>
+                <td>4</td>
+                <td class="text-right">
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary">Edit</button>
+                  <button type="button" class="btn btn-danger mx-3">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>T0003</td>
+                <td>QA-1</td>
+                <td>QA</td>
+                <td>4</td>
+                <td class="text-right">
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary">Edit</button>
+                  <button type="button" class="btn btn-danger mx-3">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>T0004</td>
+                <td>BA-1</td>
+                <td>BA</td>
+                <td>3</td>
+                <td class="text-right">
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary">Edit</button>
+                  <button type="button" class="btn btn-danger mx-3">Delete</button>
+                </td>
+              </tr>
+              <tr *ngFor="let team of teamList">
+                <th scope="row">{{team.id}}</th>
+                <td>{{team.tName}}</td>
+                <td>{{team.dName}}</td>
+                <td>{{team.noOfEmployees}}</td>
+                <td>
+                  <!--button (click)="onEdit(department)" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary">Edit</!--button-->
+                  <button (click)="delete(team)" type="button" class="btn btn-danger mx-3">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
